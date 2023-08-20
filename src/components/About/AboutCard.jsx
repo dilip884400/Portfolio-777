@@ -28,11 +28,6 @@ function AboutCard() {
             mentored junior trainees on various ReactJS projects.
             <br />
             <br />
-            I'm also a dedicated blogger, sharing insights on mental health,
-            time management, and personal growth. Outside work, I enjoy road
-            trips on my trusty Bike, appreciating the beauty of the world.
-            <br />
-            <br />
             After completing my BCA degree, I faced severe financial crises at
             home, which hindered my ability to pursue further studies. To
             address this situation, I decided to venture into farming.
@@ -50,15 +45,15 @@ function AboutCard() {
               <ImPointRight /> Exploring internet
             </li>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <ImPointRight /> Travelling
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Playing Games
             </li>
           </ul>
 
           <p style={{ color: "rgb(155 126 172)", textAlign: "right" }}>
-            "Seek What Sets Your Soul On Fire !"
+            "Believe what you prays for"
           </p>
           <footer className="blockquote-footer" style={{ textAlign: "right" }}>
             Dilip

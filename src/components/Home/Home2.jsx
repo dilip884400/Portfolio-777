@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/About1.jpg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -112,7 +112,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com/oh_so_stoned/"
+                  href="https://www.instagram.com/lovevanshi.dilip/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
