@@ -1,8 +1,5 @@
-## 🌐[Apoorv Verma - Portfolio Website](https://apoorv-verma-portfolio.vercel.app/)
+## 🌐[Dilip Lovevanshi - Portfolio Website](https://dilip-lemon.vercel.app/)
 
-<div align="center">
-  <img src="./Images/readme-img1.png" alt="Portfolio Cover" width="600" />
-</div>
 
 Welcome to my vibrant and dynamic portfolio website 🚀 Explore a fusion of technology, creativity, and personal growth, encapsulated in this digital journey.
 
@@ -30,12 +27,9 @@ Dive into an immersive experience that showcases my skills, projects, and person
 
 ## 🚀 Usage
 
-1. Explore the [Portfolio Website](https://apoorv-verma-portfolio.vercel.app/).
+1. Explore the [Portfolio Website](https://dilip-lemon.vercel.app/).
 2. Navigate seamlessly through the various sections using the intuitive menu.
 3. Dive into each project's details, interact with live demos, and explore GitHub repositories.
 4. Capture a snapshot of my journey by downloading the PDF version of my resume.
 5. Connect with me through the provided social media links and let's embark on a journey of innovation and growth together!
-## 📸 Screenshots
-![Screenshot](./Images/readme-img2.png)
----
 Thank you for visiting my portfolio website! 🌟 If you'd like to get in touch, collaborate, or have any questions, feel free to reach out through the provided links. Let's create something amazing together! 🚀🌈
