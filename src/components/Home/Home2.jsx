@@ -27,7 +27,7 @@ function Home2() {
               <br />
               I'm pretty good with tech stuff like{" "}
               <i>
-                <b className="purple">HTML, CSS, React.js, and Javascript.</b>
+                <b className="purple">HTML, CSS, Javascript, React.js and  Next.js.</b>
               </i>
               <br />
               <br />
@@ -37,29 +37,20 @@ function Home2() {
                 <b className="purple">Responsive Design </b>and{" "}
                 <b className="purple"> CSS Frameworks</b> like{" "}
                 <b className="purple">
-                  Bootstrap or Material UI, <br />
-                  User Experience (UX) Design, Performance Optimization, Web
+                  Tailwind or Bootstrap, <br />
+                  User Experience Design, Performance Optimization, Web
                   Accessibility, Testing, and Debugging.
                 </b>
               </i>
               <br />
               <br />
               I'm super stoked about creating user-centric experiences and
-              making websites accessible <br />
-              and efficient.
+              making websites accessible and efficient.
               <br />
               <br /> I strongly believe that a well-designed website can leave a
-              lasting impression on users,
-              <br />
-              and it's crucial to consider performance and accessibility while
+              lasting impression on users, and it's crucial to consider performance and accessibility while
               crafting digital experiences.
               <br />
-              <br />
-              Whenever I get the chance, I also dive into developing web
-              applications using{" "}
-              <i>
-                <b className="purple"> Next.js</b>
-              </i>
               <br />
               It lets me use cool JavaScript libraries and frameworks to create
               intuitive and seamless

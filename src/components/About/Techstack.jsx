@@ -17,7 +17,9 @@ import {
 import { AiFillHtml5 } from "react-icons/ai";
 import { SiCss3 } from "react-icons/si";
 import { TbBrandRedux } from "react-icons/tb";
+import { SiTailwindcss } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 
 function Techstack() {
   return (
@@ -28,6 +30,9 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons" title="CSS">
         <SiCss3 />
       </Col>
+      <Col xs={4} md={2} className="tech-icons" title="Tailwind">
+        <SiTailwindcss />
+      </Col>
       <Col xs={4} md={2} className="tech-icons" title="Bootstrap">
         <FaBootstrap />
       </Col>
@@ -36,6 +41,9 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="React">
         <DiReact />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons" title="Next JS">
+        <SiNextdotjs />
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="Redux">
         <TbBrandRedux />
@@ -48,9 +56,6 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="Vite">
         <SiVite />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons" title="Angular">
-        <DiAngularSimple />
       </Col>
       <Col xs={4} md={2} className="tech-icons" title="Node.js">
         <DiNodejs />

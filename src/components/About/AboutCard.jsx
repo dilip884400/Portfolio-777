@@ -35,7 +35,7 @@ function AboutCard() {
             However, my passion for problem-solving remained strong, and it
             eventually led me to explore the world of tech industries and their
             operations. I took the initiative to learn web development from
-            scratch, and now, I am working as a web developer at Amika Software.
+            scratch, and now, I am working as a Frontend developer at Aperra Soultions.
             <br />
             <br />
             Let's embark on a journey of innovation and growth together.
