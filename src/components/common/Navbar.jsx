@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlineHome, AiOutlineUser, AiFillGithub } from "react-icons/ai";
@@ -66,7 +66,7 @@ function Navbar() {
           </Link>
 
           {/* Desktop Nav Links */}
-          <ul className="hidden md:flex items-center gap-1" role="list">
+          <ul className="hidden md:flex items-center gap-1">
             {navLinks.map(({ to, label, icon }) => {
               const isActive = location.pathname === to;
               return (
@@ -143,7 +143,7 @@ function Navbar() {
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="fixed top-20 left-4 right-4 z-40 rounded-2xl backdrop-blur-2xl bg-obsidian-900/95 border border-white/[0.08] shadow-glass p-4 md:hidden"
           >
-            <ul className="flex flex-col gap-1" role="list">
+            <ul className="flex flex-col gap-1">
               {navLinks.map(({ to, label, icon }) => {
                 const isActive = location.pathname === to;
                 return (
