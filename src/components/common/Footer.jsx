@@ -51,7 +51,7 @@ function Footer() {
           </div>
 
           {/* Social Icons */}
-          <ul className="flex items-center gap-3" role="list" aria-label="Social media links">
+          <ul className="flex items-center gap-3" aria-label="Social media links">
             {socials.map(({ href, icon, label }) => (
               <li key={label}>
                 <motion.a
