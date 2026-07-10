@@ -1,8 +1,207 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============ GOOGLE FONTS ============ */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap");
+
+/* ============ CSS CUSTOM PROPERTIES ============ */
+:root {
+  --bg-base: #060711;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --accent-violet: #7c3aed;
+  --accent-purple: #a855f7;
+  --accent-fuchsia: #d946ef;
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --text-primary: #f1f5f9;
+  --text-muted: #94a3b8;
+}
+
+/* ============ GLOBAL RESETS ============ */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: "Raleway", serif !important;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ============ CUSTOM SCROLLBAR ============ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060711;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c3aed, #d946ef);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6d28d9, #c026d3);
+}
+
+/* ============ GLASSMORPHISM UTILITIES ============ */
+@layer components {
+  .glass {
+    @apply backdrop-blur-xl border border-white/[0.08] bg-white/[0.04] shadow-glass;
+  }
+
+  .glass-hover {
+    @apply hover:border-white/[0.14] hover:bg-white/[0.07] hover:shadow-glass-hover transition-all duration-300;
+  }
+
+  .glass-card {
+    @apply glass glass-hover rounded-2xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-hero {
+    @apply bg-gradient-to-r from-white via-violet-200 to-purple-300 bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm 
+           bg-gradient-to-r from-violet-600 to-purple-600 text-white 
+           hover:from-violet-500 hover:to-purple-500 
+           shadow-violet hover:shadow-violet-lg 
+           transition-all duration-300 ease-out 
+           active:scale-95;
+  }
+
+  .btn-outline {
+    @apply relative inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+           border border-white/[0.12] text-slate-300 bg-white/[0.04] backdrop-blur-sm
+           hover:border-violet-500/50 hover:text-violet-300 hover:bg-violet-500/[0.08]
+           transition-all duration-300 ease-out
+           active:scale-95;
+  }
+
+  .section-heading {
+    @apply font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-100 leading-tight;
+  }
+
+  .section-subheading {
+    @apply text-slate-400 text-lg mt-4 max-w-2xl;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium
+           border border-violet-500/20 bg-violet-500/10 text-violet-300
+           transition-all duration-200 hover:border-violet-400/40 hover:bg-violet-500/20;
+  }
+
+  .badge-emerald {
+    @apply border-emerald-500/20 bg-emerald-500/10 text-emerald-300 hover:border-emerald-400/40 hover:bg-emerald-500/20;
+  }
+
+  .badge-fuchsia {
+    @apply border-fuchsia-500/20 bg-fuchsia-500/10 text-fuchsia-300 hover:border-fuchsia-400/40 hover:bg-fuchsia-500/20;
+  }
+
+  .badge-blue {
+    @apply border-blue-500/20 bg-blue-500/10 text-blue-300 hover:border-blue-400/40 hover:bg-blue-500/20;
+  }
+
+  .badge-amber {
+    @apply border-amber-500/20 bg-amber-500/10 text-amber-300 hover:border-amber-400/40 hover:bg-amber-500/20;
+  }
+
+  .nav-link {
+    @apply relative text-slate-400 text-sm font-medium px-1 py-0.5
+           hover:text-white transition-colors duration-200
+           after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px
+           after:bg-gradient-to-r after:from-violet-400 after:to-fuchsia-400
+           after:transition-all after:duration-300
+           hover:after:w-full;
+  }
+
+  .nav-link-active {
+    @apply text-white after:w-full;
+  }
+
+  .input-glass {
+    @apply w-full px-4 py-3 rounded-xl bg-white/[0.05] border border-white/[0.08] 
+           text-slate-200 placeholder-slate-500 text-sm
+           focus:outline-none focus:border-violet-500/50 focus:bg-white/[0.08] focus:ring-1 focus:ring-violet-500/30
+           transition-all duration-200;
+  }
+}
+
+/* ============ AMBIENT GLOW EFFECTS ============ */
+.ambient-glow-violet {
+  position: fixed;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-fuchsia {
+  position: fixed;
+  bottom: -20%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(217, 70, 239, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============ NOISE TEXTURE OVERLAY ============ */
+.noise-overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+/* ============ TYPEWRITER CURSOR ============ */
+.Typewriter__cursor {
+  color: #a855f7;
+  font-weight: 300;
+}
+
+/* ============ GITHUB CALENDAR OVERRIDE ============ */
+.react-github-calendar {
+  filter: none !important;
+}
+
+/* ============ TIMELINE ============ */
+.timeline-line {
+  background: linear-gradient(180deg, #7c3aed 0%, #d946ef 100%);
+}
+
+/* ============ SELECTION COLOR ============ */
+::selection {
+  background: rgba(124, 58, 237, 0.3);
+  color: #f1f5f9;
+}
+
+/* ============ FOCUS VISIBLE ============ */
+:focus-visible {
+  outline: 2px solid rgba(124, 58, 237, 0.7);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
