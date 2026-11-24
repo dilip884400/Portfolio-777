@@ -13,6 +13,9 @@ import AnimatedSection from "../common/AnimatedSection";
 import EAuctionsHub from "../../Assets/Projects/EAuctionsHub.png";
 import GKCKlinica from "../../Assets/Projects/GKCKlinica.png";
 import HoneyBeeHarry from "../../Assets/Projects/HoneyBeeHarry.png";
+import OasisThemes from "../../Assets/Projects/OasisThemes.png";
+import Woogyy from "../../Assets/Projects/Woogyy.png";
+import Saarthi from "../../Assets/Projects/Saarthi.png";
 
 const projects = [
   // 1. EAuctionsHub Web
@@ -129,7 +132,7 @@ const projects = [
       "Created responsive multi-device sandboxes and interactive theme previews.",
       "Engineered modular design systems with customizable light and dark CSS design tokens.",
     ],
-    image: null,
+    image: OasisThemes,
     tags: [
       "React 19",
       "TypeScript",
@@ -155,7 +158,7 @@ const projects = [
       "Implemented exercise categorization, routine tracking and offline media caching.",
       "Managed automated EAS builds, Android keystore signing and Google Play compliance.",
     ],
-    image: null,
+    image: Woogyy,
     tags: [
       "React Native",
       "Expo",
@@ -181,7 +184,7 @@ const projects = [
       "Implemented typing indicators, media attachments, unread badges and offline caching.",
       "Engineered VoIP voice calling using Stream Voice and WebRTC SDK with mute, speaker and call lifecycle controls.",
     ],
-    image: null,
+    image: Saarthi,
     tags: [
       "React Native",
       "Expo",
