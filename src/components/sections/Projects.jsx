@@ -140,7 +140,13 @@ const projects = [
       "Framer Motion",
       "CSS Design Tokens",
     ],
-    links: [],
+    links: [
+      {
+        label: "Live Website",
+        url: "https://www.oasisthemes.com/",
+        icon: "live",
+      },
+    ],
     featured: true,
     accent: "violet",
   },
@@ -166,7 +172,13 @@ const projects = [
       "Redux Toolkit",
       "Video Player",
     ],
-    links: [],
+    links: [
+      {
+        label: "Live App",
+        url: "https://play.google.com/store/apps/details?id=com.woogyy&hl=en_IN",
+        icon: "live",
+      },
+    ],
     featured: true,
     accent: "purple",
   },
