@@ -9,23 +9,33 @@ import AnimatedSection from "../common/AnimatedSection";
 /**
  * Dynamically calculates experience from Dec 18, 2023.
  */
+
 function useExperience() {
   return useMemo(() => {
-    const start = new Date(2023, 11, 18); // Dec 18, 2023
+    const start = new Date(2023, 11, 18);
     const now = new Date();
+
     let years = now.getFullYear() - start.getFullYear();
     let months = now.getMonth() - start.getMonth();
-    if (now.getDate() < start.getDate()) months--;
+
+    if (now.getDate() < start.getDate()) {
+      months--;
+    }
+
     if (months < 0) {
       years--;
       months += 12;
     }
-    const totalMonths = years * 12 + months;
-    if (totalMonths < 12) return `${totalMonths} months`;
-    const yearStr = years.toString();
-    const remainder = months;
-    if (remainder === 0) return `${yearStr}+ years`;
-    return `${yearStr}.${Math.floor((remainder / 12) * 10)}+ years`;
+
+    if (years >= 3 && months === 0 && now.getDate() < 18) {
+      return "3+ years";
+    }
+
+    if (years >= 3 && months === 0) {
+      return `${years}+ years`;
+    }
+
+    return `${years}.${months} years`;
   }, []);
 }
 
@@ -112,7 +122,12 @@ function ResumeNew() {
                   Profile Summary
                 </h3>
                 <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-                  Frontend Developer with {experience} of experience specializing in React.js, Next.js, TypeScript, Tailwind CSS, and React Native. Skilled in building scalable, responsive applications, API integration, and performance optimization while delivering high-quality user experiences.
+                  Frontend Developer with {experience} of experience specializing in React.js,
+                  Next.js, TypeScript, and modern frontend architectures. Experienced in
+                  building scalable, responsive, and accessible web applications, integrating
+                  REST APIs and payment gateways, and optimizing application performance.
+                  Strong focus on clean architecture, reusable components, state management,
+                  and delivering high-quality user experiences.
                 </p>
               </div>
 
@@ -122,11 +137,44 @@ function ResumeNew() {
                   Technical Expertise
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["HTML5", "CSS3", "Tailwind CSS", "Material UI", "Bootstrap", "JavaScript", "TypeScript", "React.js", "Next.js", "React Native", "Expo", "Redux", "Apollo Client", "GraphQL API", "REST API", "Node.js", "MongoDB", "AWS", "Git", "VS Code", "Android Studio", "Claude", "Cursor AI", "Highcharts", "CI/CD Pipeline"].map((skill) => (
-                    <span key={skill} className="px-3 py-1.5 rounded-xl border border-white/[0.06] bg-white/[0.02] text-slate-300 text-xs sm:text-sm font-mono">
-                      {skill}
-                    </span>
-                  ))}
+                  {[
+  "HTML5",
+  "CSS3",
+  "JavaScript (ES6+)",
+  "TypeScript",
+  "React.js",
+  "Next.js",
+  "React 19",
+  "Vite",
+  "Tailwind CSS",
+  "Bootstrap",
+  "Material UI",
+  "Redux Toolkit",
+  "Context API",
+  "REST APIs",
+  "GraphQL",
+  "Apollo Client",
+  "Jest",
+  "React Testing Library",
+  "Framer Motion",
+  "GSAP",
+  "Highcharts.js",
+  "WCAG 2.1 AA",
+  "Core Web Vitals",
+  "SEO",
+  "Git/GitHub",
+  "Figma",
+  "Chrome DevTools",
+  "Postman",
+  "AWS",
+].map((skill) => (
+  <span
+    key={skill}
+    className="px-3 py-1.5 rounded-xl border border-white/[0.06] bg-white/[0.02] text-slate-300 text-xs sm:text-sm font-mono"
+  >
+    {skill}
+  </span>
+))}
                 </div>
               </div>
 
@@ -153,11 +201,28 @@ function ResumeNew() {
                         <p className="text-slate-500 text-xs font-mono">Nagpur, India</p>
                       </div>
                     </div>
-                    <ul className="list-disc pl-5 space-y-1.5 text-slate-400 text-sm">
-                      <li>Successfully delivered multiple projects under tight deadlines while maintaining high quality.</li>
-                      <li>Collaborated with cross-functional teams to design and implement new features, enhancing user experience.</li>
-                      <li>Conducted code reviews and mentored interns, fostering continuous improvement.</li>
-                    </ul>
+                   <ul className="list-disc pl-5 space-y-1.5 text-slate-400 text-sm">
+  <li>
+    Spearheaded the frontend development of high-performance, responsive web
+    applications using Next.js, React.js, and modern TypeScript.
+  </li>
+  <li>
+    Built accessible user interfaces aligned with WCAG 2.1 AA standards using
+    semantic HTML, keyboard support, and ARIA roles.
+  </li>
+  <li>
+    Developed reusable Tailwind CSS and Material UI component libraries,
+    improving team feature implementation speed by 25%.
+  </li>
+  <li>
+    Reduced initial page load times by 40% through route-based code splitting,
+    image optimization, and state management improvements.
+  </li>
+  <li>
+    Conducted code reviews, established coding standards, and mentored junior
+    interns to maintain clean and scalable codebases.
+  </li>
+</ul>
                   </div>
 
                   {/* FunctionUp */}
