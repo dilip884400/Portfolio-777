@@ -5,19 +5,34 @@ import AnimatedSection from "../common/AnimatedSection";
 /**
  * Dynamically formats the Aperra Solutions period with month/year.
  */
-function useAperraPerod() {
+
+function useAperraPeriod() {
   return useMemo(() => {
+    const joiningDate = new Date(2023, 11, 18);
     const now = new Date();
-    const months = [
-      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-    ];
-    return `Dec 2023 – ${months[now.getMonth()]} ${now.getFullYear()}`;
+
+    let years = now.getFullYear() - joiningDate.getFullYear();
+    let months = now.getMonth() - joiningDate.getMonth();
+
+    if (now.getDate() < joiningDate.getDate()) {
+      months--;
+    }
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    if (years >= 3 && months === 0 && now.getDate() < 18) {
+      return "3+ Years";
+    }
+
+    return `${years}.${months} Years`;
   }, []);
 }
 
 function Experience() {
-  const aperraPeriod = useAperraPerod();
+  const aperraPeriod = useAperraPeriod();
 
   const experiences = [
     {
